@@ -5,7 +5,14 @@ VisualStudioVersion = 16.0.29924.181
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoolRappPlugin", "CoolRappPlugin\CoolRappPlugin.csproj", "{1FC3B4DB-A530-4395-81D4-B12DD7249A57}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "submodules", "submodules", "{52BDDF9C-9AC0-4226-8507-A72F7EA62A3D}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "JonasPluginBase", "JonasPluginBase\JonasPluginBase\JonasPluginBase.shproj", "{7736B0EE-A6A2-452E-93EB-9968697A4D0A}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		JonasPluginBase\JonasPluginBase\JonasPluginBase.projitems*{7736b0ee-a6a2-452e-93eb-9968697a4d0a}*SharedItemsImports = 13
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -18,6 +25,9 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7736B0EE-A6A2-452E-93EB-9968697A4D0A} = {52BDDF9C-9AC0-4226-8507-A72F7EA62A3D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {989EFC26-DFEA-4540-B52A-F06AA8960C49}
