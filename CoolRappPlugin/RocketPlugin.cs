@@ -1,20 +1,14 @@
-﻿using Microsoft.Xrm.Sdk;
+﻿using Jonas;
 using Microsoft.Xrm.Sdk.Query;
-using System;
 
 namespace CoolRappPlugin
 {
-    public class RocketPlugin : IPlugin
+    public class RocketPlugin : JonasPluginBase
     {
-        public void Execute(IServiceProvider serviceProvider)
+        public override void Execute(JonasPluginBag bag)
         {
-            var trace = (ITracingService)serviceProvider.GetService(typeof(ITracingService));
-            var context = (IPluginExecutionContext)serviceProvider.GetService(typeof(IPluginExecutionContext));
-            var serviceFactory = (IOrganizationServiceFactory)serviceProvider.GetService(typeof(IOrganizationServiceFactory));
-            var service = serviceFactory.CreateOrganizationService(context.InitiatingUserId);
-
-            var user = service.Retrieve("systemuser", context.InitiatingUserId, new ColumnSet("fullname"));
-            trace.Trace($"Hello {user["fullname"]}!");
+            var user = bag.Service.Retrieve("systemuser", bag.PluginContext.InitiatingUserId, new ColumnSet("fullname"));
+            bag.Trace($"Hello {user["fullname"]}!");
         }
     }
 }
