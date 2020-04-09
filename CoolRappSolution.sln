@@ -11,6 +11,7 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "JonasPluginBase", "JonasPlu
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		JonasPluginBase\JonasPluginBase\JonasPluginBase.projitems*{1fc3b4db-a530-4395-81d4-b12dd7249a57}*SharedItemsImports = 4
 		JonasPluginBase\JonasPluginBase\JonasPluginBase.projitems*{7736b0ee-a6a2-452e-93eb-9968697a4d0a}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
